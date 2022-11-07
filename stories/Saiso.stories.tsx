@@ -10,9 +10,13 @@ const meta: Meta = {
 
 export default meta;
 
-const config = {}
+const config = {
+  name: 'Reeko.me',
+  logo: 'https://github.com/0xreeko.png',
+  notionAPI: 'akbjf'
+}
 
-const Template: Story<APIProps> = args => <SaisoWidget />;
+const Template: Story<APIProps> = args => <SaisoWidget config={config} />;
 
 export const Default = Template.bind({});
 
