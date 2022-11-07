@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "saiso-widget",
+  "name": "saiso",
   "author": "https://twitter.com/0xreeko",
   "module": "dist/saiso-widget.esm.js",
   "size-limit": [
