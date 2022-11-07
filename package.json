@@ -7,6 +7,21 @@
     "dist",
     "src"
   ],
+  "readme": "https://saiso.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xreeko/sais"
+  },
+  "keywords": [
+    "feedback",
+    "widget", 
+    "typescript",
+    "notion",
+    "notion-api",
+    "notion-databases",
+    "react",
+    "tailwind"
+  ],
   "engines": {
     "node": ">=10"
   },
