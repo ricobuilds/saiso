@@ -1,4 +1,4 @@
-interface APIProps {
+export interface APIProps {
     /**
      * The name of the product or business.
      */
@@ -13,7 +13,7 @@ interface APIProps {
     notionAPI: string
 }
 
-interface DataProps {
+export interface DataProps {
     /**
      * The type of category: 'Features' • 'Ideas' • 'Issues' • 'Other'.
      */

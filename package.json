@@ -14,7 +14,7 @@
   },
   "keywords": [
     "feedback",
-    "widget", 
+    "widget",
     "typescript",
     "notion",
     "notion-api",
@@ -69,6 +69,7 @@
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.5.13",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.5.13",
     "@storybook/react": "^6.5.13",
     "@types/react": "^18.0.25",
