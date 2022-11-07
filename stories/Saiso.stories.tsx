@@ -10,7 +10,9 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<APIProps> = args => <SaisoWidget  />;
+const config = {}
+
+const Template: Story<APIProps> = args => <SaisoWidget />;
 
 export const Default = Template.bind({});
 

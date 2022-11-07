@@ -1,16 +1,18 @@
 export interface APIProps {
-    /**
-     * The name of the product or business.
-     */
-    name: string
-    /**
-     * The URL link to a brand image to display to users.
-     */
-    logo: string
-    /**
-     * The URL to the Notion API being used
-     */
-    notionAPI: string
+    config?: {
+        /**
+         * The name of the product or business.
+         */
+        name: string
+        /**
+         * The URL link to a brand image to display to users.
+         */
+        logo: string
+        /**
+         * The URL to the Notion API being used
+         */
+        notionAPI: string
+    }
 }
 
 export interface DataProps {
