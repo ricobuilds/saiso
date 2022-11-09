@@ -16,7 +16,7 @@ const config = {
   notionAPI: 'akbjf'
 }
 
-const Template: Story<APIProps> = args => <SaisoWidget config={config} />;
+const Template: Story<APIProps> = args => <SaisoWidget name={config.name} logo={config.logo} notionAPI={config.notionAPI} />;
 
 export const Default = Template.bind({});
 

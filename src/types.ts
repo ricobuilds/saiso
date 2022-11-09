@@ -1,5 +1,4 @@
 export interface APIProps {
-    config?: {
         /**
          * The name of the product or business.
          */
@@ -12,7 +11,6 @@ export interface APIProps {
          * The URL to the Notion API being used
          */
         notionAPI: string
-    }
 }
 
 export interface DataProps {

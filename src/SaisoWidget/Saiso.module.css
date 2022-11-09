@@ -1,0 +1,55 @@
+.feelingContainer {
+    @apply flex flex-col gap-2 px-6 mb-4
+}
+
+.categoryContainer {
+    @apply flex items-center justify-around w-full gap-2 px-6 mb-4
+}
+
+.feedbackContainer {
+    @apply flex flex-col px-6 h-fit flex-grow mb-4
+}
+
+.feedback {
+    @apply w-full p-3 mt-2 overflow-hidden duration-200 border rounded-lg outline-none appearance-none resize-none focus:ring-amethyst-500 ring-2 ring-transparent bg-sylver-100 h-fit placeholder-russian-300 text-russian-600
+}
+
+.emailContainer {
+    @apply flex flex-col gap-2 px-6
+}
+
+.powered {
+    @apply flex items-center justify-center h-9 text-m-copy sm:text-d-copy text-amethyst-500
+}
+
+.widgetButton {
+    @apply flex items-center justify-center cursor-pointer border duration-200 rounded-full shadow-lg hover:border-transparent select-none w-fit px-6 py-1 gap-2 h-11 bg-gray-100 hover:bg-gray-300 active:scale-95 active:bg-gray-500 text-russian-600
+}
+
+.funda {
+    @apply flex flex-col w-full visible overflow-hidden bg-gray-100 rounded-lg h-fit text-russian-600 translate-y-0 opacity-100 ease-in
+}
+
+.fundaOff {
+    @apply flex flex-col w-full invisible overflow-hidden bg-gray-100 rounded-lg h-fit text-russian-600 translate-y-4 opacity-0
+}
+
+@keyframes animation-wave {
+    0% {@apply transform rotate-[0deg]}
+    15% {@apply transform rotate-[14deg]}
+    30% {@apply transform rotate-[-8deg]}
+    40% {@apply transform rotate-[14deg]}
+    50% {@apply transform rotate-[-4deg]}
+    60% {@apply transform rotate-[10deg]}
+    70% {@apply transform rotate-[0deg]}
+    100% {@apply transform rotate-[0deg]}
+}
+
+.widgetButton:hover > .icono {
+    animation: animation-wave 1500ms infinite;
+    @apply scale-110
+}
+
+.disabled {
+    @apply select-none opacity-30
+}   
