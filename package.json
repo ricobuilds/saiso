@@ -4,8 +4,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "readme": "https://saiso.vercel.app",
   "repository": {
@@ -52,6 +51,7 @@
   },
   "name": "saiso",
   "author": "https://twitter.com/0xreeko",
+  "description": "Saiso is a a low-code feedback widget powered by Notion, for React/Nextjs (currently).",
   "module": "dist/saiso-widget.esm.js",
   "size-limit": [
     {
