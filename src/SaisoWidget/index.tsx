@@ -123,7 +123,7 @@ export const SaisoWidget = (config: APIProps) => {
                 {/* User Satisfaction Ratings */}
                 <div className={styles.feelingContainer}>
                     <label className='text-[13px]'>How satisfied are you with the site?</label>
-                    <div className={`flex gap-3 mx-auto duration-200 ${category !== '' ? '' : 'pointer-events-none select-none'}`}>
+                    <div className={`flex gap-3 mx-auto duration-200 ${category !== '' ? '' : 'pointer-events-none select-none opacity-60'}`}>
                         {[
                             { icon: '😖', value: "Bad" },
                             { icon: '😕', value: 'Meh' },
@@ -136,13 +136,13 @@ export const SaisoWidget = (config: APIProps) => {
                 {/* Feedback */}
                 <div className={styles.feedbackContainer}>
                     <label htmlFor="feedback" className='text-[13px]'>Feedback</label>
-                    <textarea id="feedback" value={feedback} onChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleFeedback(e)} className={`${styles.feedback} ${feeling !== '' ? '' : 'pointer-events-none select-none'}`} placeholder="Type your honest opinion/s on what's going well or what could be better :)" rows={3} required />
+                    <textarea id="feedback" value={feedback} onChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleFeedback(e)} className={`${styles.feedback} ${feeling !== '' ? '' : 'pointer-events-none select-none opacity-60'}`} placeholder="Type your honest opinion/s on what's going well or what could be better :)" rows={3} required />
                 </div>
                 {/* Email */}
                 <div className={styles.emailContainer}>
                     <label htmlFor="email" className='text-[13px]'>Email <span className='ml-0.5 text-[11px] text-sylver-800'>(optional - just in case you want updates if your feedback is implemented)</span></label>
                     <input type={'email'} value={email} onChange={(e: ChangeEvent<HTMLInputElement>) => handleEmail(e)} autoComplete={'off'} id="email" className="w-full outline-none ring-2 ring-transparent focus:ring-amethyst-500 mb-3 appearance-none block border bg-sylver-100 rounded-md py-1 px-2.5" />
-                    <div className={`flex justify-center mb-3 h-9 w-full duration-500 ${category !== '' && feeling !== '' && feedback !== '' ? '' : 'pointer-events-none opacity-40'}`}>
+                    <div className={`flex justify-center mb-3 h-9 w-full duration-500 ${category !== '' && feeling !== '' && feedback !== '' ? '' : 'pointer-events-none opacity-60'}`}>
                         {
                             loading === false && message === '' ?
                                 (<RuiButton size='sm' variant="filled" color="amethyst" fullWidth onClick={() => handleSubmit()}>Submit</RuiButton>)

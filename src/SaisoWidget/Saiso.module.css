@@ -11,7 +11,7 @@
 }
 
 .feedback {
-    @apply w-full p-3 mt-2 overflow-hidden duration-200 border rounded-lg outline-none appearance-none resize-none focus:ring-amethyst-500 ring-2 ring-transparent bg-sylver-100 h-fit placeholder-russian-300 text-russian-600
+    @apply w-full p-3 mt-2 overflow-hidden duration-300 border rounded-lg outline-none appearance-none resize-none focus:ring-amethyst-500 ring-2 ring-transparent bg-sylver-100 h-fit placeholder-russian-300 text-russian-600
 }
 
 .emailContainer {
