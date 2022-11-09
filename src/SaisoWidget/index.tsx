@@ -112,7 +112,7 @@ export const SaisoWidget = (config: APIProps) => {
     }
 
     return (
-        <div className="box-border fixed z-10 flex flex-col items-end w-[350px] bottom-8 gap-6 right-8">
+        <div className="box-border fixed z-[9999] flex flex-col items-end w-[350px] bottom-8 gap-6 right-8">
             <div className={`duration-200 ease-out ${show ? styles.funda : styles.fundaOff}`}>
                 <div className="flex flex-col items-center justify-center gap-2 px-3 py-4 pb-2 mb-4 bg-gray-700 h-fit text-sylver-100 text-m-copy sm:text-d-copy">
                     <a href="https://twitter.com/0xreeko" className='overflow-hidden border-2 rounded-full'>
