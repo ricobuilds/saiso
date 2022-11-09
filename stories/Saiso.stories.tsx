@@ -10,14 +10,13 @@ const meta: Meta = {
 
 export default meta;
 
-const config: APIProps= {
+const config = {
   name: 'Reeko.me',
   logo: 'https://github.com/0xreeko.png',
-  notionAPI: 'akbjf',
-  notionDB: 'kjsdvvk'
+  notionAPI: 'https://saiso.vercel.app/api/saiso'
 }
 
-const Template: Story<APIProps> = args => <SaisoWidget name={config.name} logo={config.logo} notionAPI={config.notionAPI} notionDB={config.notionDB} />;
+const Template: Story<APIProps> = args => <SaisoWidget {...config} notionDB={`${process.env.NOTION_DATABASE}`} notionKey={`${process.env.NOTION_KEY}`} />;
 
 export const Default = Template.bind({});
 

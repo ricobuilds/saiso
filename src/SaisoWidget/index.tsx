@@ -20,6 +20,20 @@ export const SaisoWidget = (config: APIProps) => {
     const [feedback, setFeedback] = useState<string>('')
     const [email, setEmail] = useState<string>('')
 
+    const categories = [
+        { icon: '🛠', value: 'Requests' },
+        { icon: '💭', value: 'Ideas' },
+        { icon: '❗️', value: 'Issues' },
+        { icon: '🤔', value: 'Other' },
+    ]
+
+    const feelings = [
+        { icon: '😖', value: "Bad" },
+        { icon: '😕', value: 'Meh' },
+        { icon: '🙂', value: 'Good' },
+        { icon: '😍', value: 'Great' }
+    ]
+
     // functions
     const handleCategories = (args: string) => {
         setCategory(prev => prev = args)
@@ -65,7 +79,8 @@ export const SaisoWidget = (config: APIProps) => {
                 feedback,
                 email: email === '' ? 'n/a' : !email.includes('@') ? 'n/a' : email ,
                 date: newDate,
-                notionDB: config.notionDB
+                notionDB: config.notionDB,
+                notionKey: config.notionKey 
             }
 
             // store to notion
@@ -110,12 +125,7 @@ export const SaisoWidget = (config: APIProps) => {
                 </div>
                 <div className={styles.categoryContainer}>
                     {
-                        [
-                            { icon: '🛠', value: 'Requests' },
-                            { icon: '💭', value: 'Ideas' },
-                            { icon: '❗️', value: 'Issues' },
-                            { icon: '🤔', value: 'Other' },
-                        ].map((item) => (
+                        categories.map((item) => (
 
                             <CategoryItem key={naniteId()} icon={item.icon} title={item.value} selected={item.value === category} onClick={() => item.value !== category ? handleCategories(item.value) : null} />
                         ))
@@ -125,11 +135,7 @@ export const SaisoWidget = (config: APIProps) => {
                 <div className={styles.feelingContainer}>
                     <label className='text-[13px]'>How satisfied are you with the site?</label>
                     <div className={`flex gap-3 mx-auto duration-200 ${category !== '' ? '' : 'pointer-events-none select-none opacity-60'}`}>
-                        {[
-                            { icon: '😖', value: "Bad" },
-                            { icon: '😕', value: 'Meh' },
-                            { icon: '🙂', value: 'Good' },
-                            { icon: '😍', value: 'Great' }].map((item) => (
+                        {feelings.map((item) => (
                                 <FeelingItem key={naniteId()} selected={item.value === feeling} emoji={item.icon} onClick={() => item.value !== feeling ? handleFeelings(item.value) : null} />
                             ))}
                     </div>

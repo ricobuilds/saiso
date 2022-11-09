@@ -15,7 +15,10 @@ export interface APIProps {
      * The ID for your Notion Database
      */
     notionDB: string
-
+    /**
+     * The ID for your Notion Database
+     */
+     notionKey: string
 }
 
 export interface DataProps {
@@ -42,5 +45,9 @@ export interface DataProps {
     /**
      * The ID for your Notion Database
      */
-     notionDB: string
+    notionDB: string
+    /**
+     * The ID for your Notion Database
+     */
+     notionKey: string
 }
