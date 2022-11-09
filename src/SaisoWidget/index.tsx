@@ -64,7 +64,8 @@ export const SaisoWidget = (config: APIProps) => {
                 satisfactionRate: feeling,
                 feedback,
                 email: email === '' ? 'n/a' : email,
-                date: newDate
+                date: newDate,
+                notionDB: config.notionDB
             }
 
             // store to notion

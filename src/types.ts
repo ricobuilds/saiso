@@ -39,4 +39,8 @@ export interface DataProps {
      * The date the feedback was provided by the user.
      */
     date: string
+    /**
+     * The ID for your Notion Database
+     */
+     notionDB: string
 }
