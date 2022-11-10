@@ -109,7 +109,8 @@ export const SaisoWidget = (config: APIProps) => {
     }
 
     return (
-        <div className="fixed z-50 flex flex-col items-end w-[350px] bottom-8 gap-6 right-8">
+        <div className='fixed z-50 flex flex-col items-end gap-6 w-fit bottom-8 right-8'>
+        <div className={show ? 'w-[350px]' : styles.fundaOff}>
             <div className={`duration-200 ease-out ${show ? styles.funda : styles.fundaOff}`}>
                 <div className="flex flex-col items-center justify-center gap-2 px-3 py-4 pb-2 mb-4 bg-gray-700 h-fit text-sylver-100 text-m-copy sm:text-d-copy">
                     <a href="https://twitter.com/0xreeko" className='overflow-hidden border-2 rounded-full'>
@@ -130,7 +131,7 @@ export const SaisoWidget = (config: APIProps) => {
                 </div>
                 {/* User Satisfaction Ratings */}
                 <div className={styles.feelingContainer}>
-                    <label className='text-[13px]' style={{color: 'rgb(11, 14, 35)'}}>How satisfied are you with the site?</label>
+                    <label className='text-[13px]' style={{ color: 'rgb(12, 15, 39)'}}>How satisfied are you with the site?</label>
                     <div className={`flex gap-3 mx-auto duration-200 ${category !== '' ? '' : 'pointer-events-none select-none opacity-60'}`}>
                         {feelings.map((item) => (
                             <FeelingItem key={naniteId()} selected={item.value === feeling} emoji={item.icon} onClick={() => item.value !== feeling ? handleFeelings(item.value) : null} />
@@ -139,12 +140,12 @@ export const SaisoWidget = (config: APIProps) => {
                 </div>
                 {/* Feedback */}
                 <div className={styles.feedbackContainer}>
-                    <label htmlFor="feedback" className='text-[13px]'>Feedback</label>
+                    <label htmlFor="feedback" className='text-[13px]' style={{ color: 'rgb(12, 15, 39)'}}>Feedback</label>
                     <textarea id="feedback" value={feedback} onChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleFeedback(e)} className={`${styles.feedback} ${feeling !== '' ? '' : 'pointer-events-none select-none opacity-60'}`} placeholder="Type your honest opinion/s on what's going well or what could be better :)" rows={3} required />
                 </div>
                 {/* Email */}
                 <div className={styles.emailContainer}>
-                    <label htmlFor="email" className='text-[13px]' style={{ color: 'rgb(11, 14, 35)'}}>Email <span className='ml-0.5 text-[11px] text-sylver-800'>(optional - just in case you want updates if your feedback is implemented)</span></label>
+                    <label htmlFor="email" className='text-[13px]' style={{ color: 'rgb(12, 15, 39)'}}>Email <span className='ml-0.5 text-[11px] text-sylver-800'>(optional - just in case you want updates if your feedback is implemented)</span></label>
                     <input type={'email'} value={email} onChange={(e: ChangeEvent<HTMLInputElement>) => handleEmail(e)} autoComplete={'off'} id="email" className="w-full outline-none ring-2 ring-transparent focus:ring-amethyst-500 mb-3 appearance-none block border bg-sylver-100 rounded-md py-1 px-2.5" />
                     <div className={`flex justify-center mb-3 h-9 w-full duration-500 ${category !== '' && feeling !== '' && feedback !== '' ? '' : 'pointer-events-none opacity-60'}`}>
                         {
@@ -164,6 +165,7 @@ export const SaisoWidget = (config: APIProps) => {
                     <a href="https://saiso.vercel.app">Powered by Saiso</a>
                 </div>
             </div>
+        </div>
             <div
                 onClick={() => setShow((prev) => prev = !prev)}
                 className={`${styles.widgetButton}`}>
