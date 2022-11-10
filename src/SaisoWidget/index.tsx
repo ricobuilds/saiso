@@ -117,7 +117,7 @@ export const SaisoWidget = (config: APIProps) => {
                     </a>
                     <div className='flex flex-col items-center text-center'>
                         <span className="font-medium text-d-base">What&apos;s on your mind?</span>
-                        <span className='text-gray-400'>Tell me your thoughts about {config.name}, I&apos;d like to know!</span>
+                        <span className='text-gray-400'>Thoughts about {config.name}? We&apos;d like to know!</span>
                     </div>
                 </div>
                 <div className={styles.categoryContainer}>
