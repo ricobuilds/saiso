@@ -110,8 +110,7 @@ export const SaisoWidget = (config: APIProps) => {
 
     return (
         <div className='fixed z-50 flex flex-col items-end gap-6 w-fit bottom-8 right-8'>
-        <div className={show ? 'w-[350px]' : styles.fundaOff}>
-            <div className={`duration-200 ease-out ${show ? styles.funda : styles.fundaOff}`}>
+            <div className={`duration-700 ease-in-out ${show ? `w-[350px] ${styles.funda}` : styles.fundaOff}`}>
                 <div className="flex flex-col items-center justify-center gap-2 px-3 py-4 pb-2 mb-4 bg-gray-700 h-fit text-sylver-100 text-m-copy sm:text-d-copy">
                     <a href="https://twitter.com/0xreeko" className='overflow-hidden border-2 rounded-full'>
                         <img src={config.logo} className="w-12 h-12 duration-300 hover:scale-110" alt="Creator Avatar" />
@@ -165,7 +164,6 @@ export const SaisoWidget = (config: APIProps) => {
                     <a href="https://saiso.vercel.app">Powered by Saiso</a>
                 </div>
             </div>
-        </div>
             <div
                 onClick={() => setShow((prev) => prev = !prev)}
                 className={`${styles.widgetButton}`}>
