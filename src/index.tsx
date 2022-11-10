@@ -1,4 +1,3 @@
-import './saiso.css'
-import './SaisoWidget/Saiso.module.css'
+import './tailwind.css'
 
 export * from './SaisoWidget/'
