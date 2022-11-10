@@ -25,7 +25,7 @@ export interface DataProps {
     /**
      * The type of category: 'Features' • 'Ideas' • 'Issues' • 'Other'.
      */
-    category: string
+    type: string
     /**
      * A user's satisfaction rate with your product.
      */
@@ -42,12 +42,4 @@ export interface DataProps {
      * The date the feedback was provided by the user.
      */
     date: string
-    /**
-     * The ID for your Notion Database
-     */
-    notionDB: string
-    /**
-     * The ID for your Notion Database
-     */
-     notionKey: string
 }

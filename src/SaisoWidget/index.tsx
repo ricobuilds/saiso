@@ -34,7 +34,6 @@ export const SaisoWidget = (config: APIProps) => {
         { icon: '😍', value: 'Great' }
     ]
 
-    // functions
     const handleCategories = (args: string) => {
         setCategory(prev => prev = args)
     }
@@ -74,13 +73,11 @@ export const SaisoWidget = (config: APIProps) => {
 
             // capture data 
             const _data: DataProps = {
-                category,
+                type: category,
                 satisfactionRate: feeling,
-                feedback,
-                email: email === '' ? 'n/a' : !email.includes('@') ? 'n/a' : email ,
-                date: newDate,
-                notionDB: config.notionDB,
-                notionKey: config.notionKey 
+                feedback: feedback,
+                email: email === '' ? 'n/a' : email,
+                date: newDate
             }
 
             // store to notion
