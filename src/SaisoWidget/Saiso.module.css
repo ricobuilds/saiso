@@ -27,11 +27,11 @@
 }
 
 .funda {
-    @apply flex flex-col w-full visible overflow-hidden bg-gray-100 rounded-lg h-fit text-russian-600 translate-y-0 opacity-100 ease-in
+    @apply flex flex-col visible overflow-hidden bg-gray-100 rounded-lg h-fit text-russian-600 translate-y-0 opacity-100 ease-in
 }
 
 .fundaOff {
-    @apply flex flex-col w-full invisible overflow-hidden bg-gray-100 rounded-lg h-fit text-russian-600 translate-y-4 opacity-0
+    @apply flex flex-col invisible overflow-hidden bg-gray-100 rounded-lg h-fit text-russian-600 translate-y-4 opacity-0 ease-out
 }
 
 @keyframes animation-wave {
