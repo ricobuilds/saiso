@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import { RuiButton, RuiLoader } from 'ruskelui'
 import { APIProps, DataProps } from '../types'
 import { SuccessMessage } from './SuccessMessage'
@@ -109,7 +109,7 @@ export const SaisoWidget = (config: APIProps) => {
     }
 
     return (
-        <div className="box-border fixed z-[9999] flex flex-col items-end w-[350px] bottom-8 gap-6 right-8">
+        <div className="box-border fixed z-50 flex flex-col items-end w-[350px] bottom-8 gap-6 right-8">
             <div className={`duration-200 ease-out ${show ? styles.funda : styles.fundaOff}`}>
                 <div className="flex flex-col items-center justify-center gap-2 px-3 py-4 pb-2 mb-4 bg-gray-700 h-fit text-sylver-100 text-m-copy sm:text-d-copy">
                     <a href="https://twitter.com/0xreeko" className='overflow-hidden border-2 rounded-full'>
@@ -133,8 +133,8 @@ export const SaisoWidget = (config: APIProps) => {
                     <label className='text-[13px]'>How satisfied are you with the site?</label>
                     <div className={`flex gap-3 mx-auto duration-200 ${category !== '' ? '' : 'pointer-events-none select-none opacity-60'}`}>
                         {feelings.map((item) => (
-                                <FeelingItem key={naniteId()} selected={item.value === feeling} emoji={item.icon} onClick={() => item.value !== feeling ? handleFeelings(item.value) : null} />
-                            ))}
+                            <FeelingItem key={naniteId()} selected={item.value === feeling} emoji={item.icon} onClick={() => item.value !== feeling ? handleFeelings(item.value) : null} />
+                        ))}
                     </div>
                 </div>
                 {/* Feedback */}
